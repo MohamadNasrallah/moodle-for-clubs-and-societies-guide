@@ -6,7 +6,6 @@
 - [ ] **AUB name and colour:** the site uses a text wordmark ("AUB" badge) and maroon #840132. Confirm that this use is acceptable and whether an official logo or palette should replace it.
 - [ ] **Removed content:** the "See it in action" page (IEEE AUB example and ideas for other clubs) was removed on request. Restore it from git history if OSA wants it back.
 - [ ] **Feature wording:** the 26 feature descriptions and club examples in `script.js` (for example Attendance, Custom certificate, Reengagement).
-- [ ] **Footer:** says "Draft wording, pending OSA review". Remove it once approved.
 - [ ] **Help button:** "More questions? Write it in Outlook on the web" opens a new Outlook message addressed to man53@mail.aub.edu. The address is not shown on the page but is inside the link. Confirm this is the right contact, or switch it to a Student Activities address.
 - [ ] **Support contact:** "the club's cabinet or the Student Activities team at OSA". Confirm whether a link or email should be added.
 
