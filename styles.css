@@ -50,11 +50,9 @@ a { color: var(--aub-maroon); }
 .site-header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem; padding-top: .6rem; padding-bottom: .6rem; }
 .wordmark { display: flex; align-items: center; gap: .5rem; text-decoration: none; color: var(--ink); min-width: 0; flex: 1 1 0; }
-.wordmark-aub {
-  background: var(--aub-maroon); color: #fff; font-weight: 800; letter-spacing: .06em;
-  padding: .2rem .5rem; border-radius: 6px; flex: none;
-}
+.wordmark-aub { font-weight: 800; letter-spacing: .06em; flex: none; color: inherit; }
 .wordmark-text { font-weight: 700; font-size: .9rem; line-height: 1.2; }
+.wordmark { color: var(--aub-maroon); }
 
 .menu-toggle {
   display: none; align-items: center; gap: .5rem; background: var(--aub-maroon); color: #fff;
@@ -146,7 +144,7 @@ a { color: var(--aub-maroon); }
   background: var(--aub-maroon); color: #fff; font-size: .85rem; display: flex; align-items: center; justify-content: center;
 }
 .hero-card li.plus { background: transparent; color: #fff; border: 2px dashed rgba(255, 255, 255, .6); counter-increment: none; font-weight: 500; }
-.hero-card li.plus::before { content: "+"; background: var(--gold); color: var(--ink); }
+.hero-card li.plus::before { content: "+"; background: #fff; color: var(--aub-maroon); }
 
 /* ---------- Inner page header ---------- */
 .page-head {

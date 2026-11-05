@@ -7,7 +7,7 @@
 - [ ] **Removed content:** the "See it in action" page (IEEE AUB example and ideas for other clubs) was removed on request. Restore it from git history if OSA wants it back.
 - [ ] **Feature wording:** the 26 feature descriptions and club examples in `script.js` (for example Attendance, Custom certificate, Reengagement).
 - [ ] **Footer:** says "Draft wording, pending OSA review". Remove it once approved.
-- [ ] **Feedback email:** the "Send feedback" links open an email to man53@mail.aub.edu. Confirm this address should be public on the site.
+- [ ] **Help button:** "More questions? Write it in Outlook on the web" opens a new Outlook message addressed to man53@mail.aub.edu. The address is not shown on the page but is inside the link. Confirm this is the right contact, or switch it to a Student Activities address.
 - [ ] **Support contact:** "the club's cabinet or the Student Activities team at OSA". Confirm whether a link or email should be added.
 
 - [ ] **Feature icons (`icons/`):** open-source Moodle icons copied from Moodle's GitHub repository (core activities, branch MOODLE_405_STABLE) and from each add-on plugin's own repository (questionnaire, choice group, face-to-face, attendance, certificate, StudentQuiz, reengagement). The checklist icon comes from a fork of the checklist plugin and has a different style. All are GPL-licensed Moodle code. Confirm they are fine to reuse, and replace any that do not match AUB's Moodle look.

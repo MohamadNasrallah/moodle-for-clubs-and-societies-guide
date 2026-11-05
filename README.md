@@ -19,7 +19,7 @@ Open `index.html` in a browser. No server is needed.
 ## Edit the content
 
 - **Features:** edit the `FEATURES` array at the top of `script.js`. Each item has `name`, `category`, `meaning`, and `example`. The `category` must match one of the names in the `CATEGORIES` list just above it.
-- **Everything else:** edit the page it appears on. Mission and navigation tiles are in `index.html`, the reasons in `why.html`, the steps and event flow in `pipeline.html`, club sections in `inside.html`. The header and footer are repeated in each page, so change them in all five. The feedback email link is in the help box on `index.html` and in every footer.
+- **Everything else:** edit the page it appears on. Mission and navigation tiles are in `index.html`, the reasons in `why.html`, the steps and event flow in `pipeline.html`, club sections in `inside.html`. The header and footer are repeated in each page, so change them in all five. The Outlook help button is in the help box on `index.html`.
 - **Colour:** change `--aub-maroon` in `styles.css`.
 
 All paths are relative, so the site works from a folder, from `file://`, and on GitHub Pages.
