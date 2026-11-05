@@ -289,6 +289,10 @@ a { color: var(--aub-maroon); }
 .feature-card[hidden] { display: none; }
 .cat-0 { --accent: var(--c0); } .cat-1 { --accent: var(--c1); } .cat-2 { --accent: var(--c2); }
 .cat-3 { --accent: var(--c3); } .cat-4 { --accent: var(--c4); } .cat-5 { --accent: var(--c5); } .cat-6 { --accent: var(--c6); }
+.feature-head { display: flex; gap: .75rem; align-items: center; margin-bottom: .6rem; }
+.feature-icon { flex: none; width: 2.75rem; height: 2.75rem; padding: .5rem; background: var(--bg-tint); border: 1px solid var(--line); border-radius: 12px; }
+.feature-titles { min-width: 0; }
+.feature-titles h3 { margin: 0; }
 .feature-cat { margin: 0 0 .35rem; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
 .feature-meaning { margin-bottom: .6rem; }
 .feature-example { margin: 0; font-size: .95rem; color: var(--ink-soft); background: var(--bg-tint); border-radius: 10px; padding: .6rem .75rem; }

@@ -4,6 +4,7 @@
    EDIT HERE: the feature list below drives the "All features"
    grid. Each item has:
      name      - the feature name shown on the card
+     icon      - file name (without .svg) in the icons folder
      category  - must match one of the names in CATEGORIES
      meaning   - 1 to 2 short, student-friendly sentences
      example   - one club example (written as "can", not "does")
@@ -24,24 +25,28 @@ const FEATURES = [
   /* ---- Stay informed ---- */
   {
     name: "Announcements forum",
+    icon: "forum",
     category: "Stay informed",
     meaning: "Official club updates in one place.",
     example: "A club can post meeting times and news here."
   },
   {
     name: "Text and media area",
+    icon: "label",
     category: "Stay informed",
     meaning: "Information, images, and video shown directly on the club page.",
     example: "A club can show a welcome video at the top of its General section."
   },
   {
     name: "Page",
+    icon: "page",
     category: "Stay informed",
     meaning: "A dedicated page for longer information.",
     example: "A club can explain how its committees work on a single page."
   },
   {
     name: "URL",
+    icon: "url",
     category: "Stay informed",
     meaning: "Links to useful outside content.",
     example: "A club can link to an article or a tool it recommends."
@@ -50,24 +55,28 @@ const FEATURES = [
   /* ---- Sign up and join in ---- */
   {
     name: "Choice",
+    icon: "choice",
     category: "Sign up and join in",
     meaning: "A quick vote or a simple sign-up.",
     example: "A club can let members vote on the topic of the next workshop."
   },
   {
     name: "Questionnaire",
+    icon: "questionnaire",
     category: "Sign up and join in",
     meaning: "A detailed sign-up form or survey.",
     example: "A club can use one to collect details for a larger event."
   },
   {
     name: "Group choice",
+    icon: "choicegroup",
     category: "Sign up and join in",
     meaning: "Join a team, committee, or interest group.",
     example: "A club can let members pick an interest track."
   },
   {
     name: "Face-to-Face",
+    icon: "facetoface",
     category: "Sign up and join in",
     meaning: "Book a seat for an in-person session. There can be capacity limits and possibly a waitlist.",
     example: "A club can use it for a workshop with limited seats."
@@ -76,18 +85,21 @@ const FEATURES = [
   /* ---- Attend and get recognized ---- */
   {
     name: "Attendance",
+    icon: "attendance",
     category: "Attend and get recognized",
     meaning: "Records who attended an event. The method depends on how the club sets it up.",
     example: "A club can record attendance at its weekly meetings."
   },
   {
     name: "Custom certificate",
+    icon: "customcert",
     category: "Attend and get recognized",
     meaning: "A participation certificate, when a club offers one.",
     example: "A club can offer one after a workshop series."
   },
   {
     name: "Badges",
+    icon: "badge",
     category: "Attend and get recognized",
     meaning: "Digital recognition for milestones.",
     example: "A club can give a badge for taking part regularly."
@@ -96,12 +108,14 @@ const FEATURES = [
   /* ---- Share your voice ---- */
   {
     name: "Feedback",
+    icon: "feedback",
     category: "Share your voice",
     meaning: "Tell the club what worked and what to improve.",
     example: "A club can ask for feedback after each event."
   },
   {
     name: "Forum",
+    icon: "forum",
     category: "Share your voice",
     meaning: "Discuss topics, ask questions, and find teammates.",
     example: "A club can start a thread where members look for project partners."
@@ -110,42 +124,49 @@ const FEATURES = [
   /* ---- Learn ---- */
   {
     name: "Book",
+    icon: "book",
     category: "Learn",
     meaning: "A structured, multi-page guide or set of workshop notes.",
     example: "A club can turn a workshop into a step-by-step guide."
   },
   {
     name: "H5P interactive content",
+    icon: "h5pactivity",
     category: "Learn",
     meaning: "Interactive videos and activities.",
     example: "A club can add questions inside a recorded talk."
   },
   {
     name: "Lesson",
+    icon: "lesson",
     category: "Learn",
     meaning: "Guided, step-by-step learning.",
     example: "A club can walk new members through its basics."
   },
   {
     name: "Quiz",
+    icon: "quiz",
     category: "Learn",
     meaning: "Test what you learned.",
     example: "A club can offer a short quiz after a workshop."
   },
   {
     name: "StudentQuiz",
+    icon: "studentquiz",
     category: "Learn",
     meaning: "Members write and practice each other's questions.",
     example: "A club can build a shared bank of practice questions."
   },
   {
     name: "Glossary",
+    icon: "glossary",
     category: "Learn",
     meaning: "A shared list of terms.",
     example: "A cultural club can collect words and meanings from members."
   },
   {
     name: "Folder",
+    icon: "folder",
     category: "Learn",
     meaning: "Grouped downloadable files.",
     example: "A club can keep slides and handouts together in one folder."
@@ -154,30 +175,35 @@ const FEATURES = [
   /* ---- Build together ---- */
   {
     name: "Assignment",
+    icon: "assign",
     category: "Build together",
     meaning: "Submit your work for a challenge.",
     example: "A club can run a challenge where members upload their solutions."
   },
   {
     name: "Workshop",
+    icon: "workshop",
     category: "Build together",
     meaning: "Review each other's submissions.",
     example: "A club can let members give each other feedback on their work."
   },
   {
     name: "Database",
+    icon: "data",
     category: "Build together",
     meaning: "A searchable shared collection.",
     example: "A club can use it for a project showcase or an event archive."
   },
   {
     name: "Wiki",
+    icon: "wiki",
     category: "Build together",
     meaning: "Pages a group writes and edits together.",
     example: "A project team can keep its notes in one shared wiki."
   },
   {
     name: "Checklist",
+    icon: "checklist",
     category: "Build together",
     meaning: "Track the steps for a trip, project, or onboarding.",
     example: "An outdoors club can share a preparation checklist for a trip."
@@ -186,6 +212,7 @@ const FEATURES = [
   /* ---- Stay on track ---- */
   {
     name: "Reengagement",
+    icon: "reengagement",
     category: "Stay on track",
     meaning: "Automatic reminders and follow-ups set up by the club.",
     example: "A club can set up a reminder for members who have not yet signed up."
@@ -293,8 +320,20 @@ const FEATURES = [
     FEATURES.forEach(function (f) {
       var catIndex = Math.max(0, CATEGORIES.indexOf(f.category));
       var card = el("article", "feature-card cat-" + catIndex);
-      card.appendChild(el("p", "feature-cat", f.category));
-      card.appendChild(el("h3", "", f.name));
+      var head = el("div", "feature-head");
+      if (f.icon) {
+        var img = el("img", "feature-icon");
+        img.src = "icons/" + f.icon + ".svg";
+        img.alt = "";
+        img.width = 28;
+        img.height = 28;
+        head.appendChild(img);
+      }
+      var titles = el("div", "feature-titles");
+      titles.appendChild(el("p", "feature-cat", f.category));
+      titles.appendChild(el("h3", "", f.name));
+      head.appendChild(titles);
+      card.appendChild(head);
       card.appendChild(el("p", "feature-meaning", f.meaning));
       var ex = el("p", "feature-example");
       ex.appendChild(el("span", "feature-example-label", "Club example: "));

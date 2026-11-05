@@ -10,6 +10,7 @@
 - [ ] **Feedback email:** the "Send feedback" links open an email to man53@mail.aub.edu. Confirm this address should be public on the site.
 - [ ] **Support contact:** "the club's cabinet or the Student Activities team at OSA". Confirm whether a link or email should be added.
 
+- [ ] **Feature icons (`icons/`):** open-source Moodle icons copied from Moodle's GitHub repository (core activities, branch MOODLE_405_STABLE) and from each add-on plugin's own repository (questionnaire, choice group, face-to-face, attendance, certificate, StudentQuiz, reengagement). The checklist icon comes from a fork of the checklist plugin and has a different style. All are GPL-licensed Moodle code. Confirm they are fine to reuse, and replace any that do not match AUB's Nexus look.
 - [ ] **Logos:** the site uses a text wordmark. If OSA wants the official AUB or Nexus logos used, OSA needs to supply the files and confirm usage rules.
 
 ## Conflicts between the brief and other instructions
