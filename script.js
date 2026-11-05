@@ -193,19 +193,20 @@ const FEATURES = [
 ];
 
 /* ==========================================================
-   Everything below makes the page work. You do not need to
+   Everything below makes the pages work. You do not need to
    edit it to change the content.
    ========================================================== */
 
 (function () {
   "use strict";
 
-  var root = document.documentElement;
-  root.classList.add("js");
+  document.documentElement.classList.add("js");
 
-  function init() {
-    setupMenu();
-    setupFeatures();
+  function el(tag, className, text) {
+    var node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text) node.textContent = text;
+    return node;
   }
 
   /* ---------- Mobile menu ---------- */
@@ -218,20 +219,61 @@ const FEATURES = [
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
       nav.classList.toggle("is-open", open);
     }
-
     toggle.addEventListener("click", function () {
       setOpen(toggle.getAttribute("aria-expanded") !== "true");
     });
-
-    nav.addEventListener("click", function (e) {
-      if (e.target.closest("a")) setOpen(false);
-    });
-
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
         setOpen(false);
         toggle.focus();
       }
+    });
+  }
+
+  /* ---------- Tabs (sections stay readable without JavaScript) ---------- */
+  function setupTabs() {
+    var groups = document.querySelectorAll("[data-tabs]");
+    groups.forEach(function (group, g) {
+      var panels = Array.prototype.slice.call(group.querySelectorAll(".tab-panel"));
+      if (!panels.length) return;
+      var list = el("div", "tablist");
+      list.setAttribute("role", "tablist");
+      var tabs = [];
+
+      function select(index, focus) {
+        tabs.forEach(function (t, i) {
+          var on = i === index;
+          t.setAttribute("aria-selected", on ? "true" : "false");
+          t.tabIndex = on ? 0 : -1;
+          panels[i].hidden = !on;
+        });
+        if (focus) tabs[index].focus();
+      }
+
+      panels.forEach(function (p, i) {
+        var id = "tab-" + g + "-" + i;
+        var t = el("button", "tab", p.getAttribute("data-tab-title"));
+        t.type = "button";
+        t.id = id;
+        t.setAttribute("role", "tab");
+        p.setAttribute("role", "tabpanel");
+        p.setAttribute("aria-labelledby", id);
+        t.setAttribute("aria-controls", "panel-" + g + "-" + i);
+        p.id = "panel-" + g + "-" + i;
+        t.addEventListener("click", function () { select(i, false); });
+        t.addEventListener("keydown", function (e) {
+          var n = tabs.length;
+          if (e.key === "ArrowRight") { e.preventDefault(); select((i + 1) % n, true); }
+          else if (e.key === "ArrowLeft") { e.preventDefault(); select((i - 1 + n) % n, true); }
+          else if (e.key === "Home") { e.preventDefault(); select(0, true); }
+          else if (e.key === "End") { e.preventDefault(); select(n - 1, true); }
+        });
+        tabs.push(t);
+        list.appendChild(t);
+      });
+
+      group.insertBefore(list, group.firstChild);
+      select(0, false);
     });
   }
 
@@ -248,16 +290,9 @@ const FEATURES = [
     var activeCategory = "All";
     var cards = [];
 
-    function el(tag, className, text) {
-      var node = document.createElement(tag);
-      if (className) node.className = className;
-      if (text) node.textContent = text;
-      return node;
-    }
-
-    // Build cards
     FEATURES.forEach(function (f) {
-      var card = el("article", "feature-card");
+      var catIndex = Math.max(0, CATEGORIES.indexOf(f.category));
+      var card = el("article", "feature-card cat-" + catIndex);
       card.appendChild(el("p", "feature-cat", f.category));
       card.appendChild(el("h3", "", f.name));
       card.appendChild(el("p", "feature-meaning", f.meaning));
@@ -273,7 +308,6 @@ const FEATURES = [
       });
     });
 
-    // Build filter buttons
     var buttons = [];
     ["All"].concat(CATEGORIES).forEach(function (name) {
       var b = el("button", "chip", name);
@@ -308,6 +342,12 @@ const FEATURES = [
     search.addEventListener("input", apply);
     tools.hidden = false;
     apply();
+  }
+
+  function init() {
+    setupMenu();
+    setupTabs();
+    setupFeatures();
   }
 
   if (document.readyState === "loading") {

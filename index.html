@@ -10,12 +10,12 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
-<body>
+<body class="home">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="wordmark" href="#top" aria-label="Moodle for Clubs and Societies Guide, back to top">
+      <a class="wordmark" href="index.html" aria-label="Moodle for Clubs and Societies Guide, home">
         <span class="wordmark-aub">AUB</span><span class="wordmark-text">Moodle for Clubs and Societies Guide</span>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -24,270 +24,88 @@
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Main">
         <ul>
-          <li><a href="#why">Why Nexus</a></li>
-          <li><a href="#start">Get started</a></li>
-          <li><a href="#inside">Inside a club page</a></li>
-          <li><a href="#features">All features</a></li>
-          <li><a href="#event">An event</a></li>
-          <li><a href="#example">In action</a></li>
-          <li><a href="#help">Help</a></li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="why.html">Why Nexus</a></li>
+          <li><a href="start.html">Get started</a></li>
+          <li><a href="inside.html">Inside a club page</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="examples.html">See it in action</a></li>
+          <li class="nav-cta"><a class="btn btn-small" href="https://lms.aub.edu.lb" target="_blank" rel="noopener noreferrer">Open Nexus<span class="visually-hidden"> (opens in a new tab)</span></a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- 1. HERO -->
-    <section class="hero" id="top">
-      <div class="wrap hero-inner">
-        <p class="eyebrow">Student guide</p>
-        <h1>Moodle for Clubs and Societies Guide</h1>
-        <p class="mission">&ldquo;Every AUB club in one place, so you can find what&rsquo;s happening, show up, build something, and be part of it.&rdquo;</p>
-        <div class="button-row">
-          <a class="btn btn-light" href="#features">Explore features</a>
-          <a class="btn btn-outline-light" href="https://lms.aub.edu.lb" target="_blank" rel="noopener noreferrer">Open Nexus<span class="visually-hidden"> (opens in a new tab)</span></a>
-        </div>
-        <p class="hero-note">Nexus is AUB&rsquo;s university-wide platform. It runs on Moodle and was previously called Moodle. The Office of Student Affairs (OSA) has rolled out club pages on it for 95+ clubs and societies.</p>
-      </div>
-    </section>
-
-    <!-- 2. WHY NEXUS -->
-    <section class="section" id="why" aria-labelledby="why-title">
-      <div class="wrap">
-        <h2 id="why-title">Why Nexus matters</h2>
-        <p class="lead">Club pages on Nexus are meant to make clubs easier to find and easier to join in with.</p>
-        <ul class="why-list">
-          <li><span class="why-num" aria-hidden="true">1</span>Attract more students to clubs and societies</li>
-          <li><span class="why-num" aria-hidden="true">2</span>Increase engagement</li>
-          <li><span class="why-num" aria-hidden="true">3</span>Shift clubs from something you only follow to something you take part in</li>
-          <li><span class="why-num" aria-hidden="true">4</span>Make clubs interactive, with signing up, voting, learning, discussing, and building together</li>
-          <li><span class="why-num" aria-hidden="true">5</span>Keep each club&rsquo;s events, resources, and history in one place so they carry forward from one cabinet to the next</li>
-        </ul>
-
-        <div class="compare" role="group" aria-label="Follow versus take part">
-          <div class="compare-col compare-follow">
-            <h3>Follow</h3>
-            <p>Something you watch from the outside.</p>
-            <ul>
-              <li>See what a club posts</li>
-              <li>Hear about an event</li>
-              <li>Stay a spectator</li>
-            </ul>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Student guide</p>
+          <h1>Moodle for Clubs and Societies Guide</h1>
+          <p class="mission">&ldquo;Every AUB club in one place, so you can find what&rsquo;s happening, show up, build something, and be part of it.&rdquo;</p>
+          <div class="button-row">
+            <a class="btn btn-light" href="features.html">Explore features</a>
+            <a class="btn btn-outline-light" href="https://lms.aub.edu.lb" target="_blank" rel="noopener noreferrer">Open Nexus<span class="visually-hidden"> (opens in a new tab)</span></a>
           </div>
-          <div class="compare-col compare-part">
-            <h3>Take part</h3>
-            <p>Something you are inside of.</p>
-            <ul>
-              <li>Sign up and vote</li>
-              <li>Learn and discuss</li>
-              <li>Build together</li>
-            </ul>
-          </div>
+          <p class="hero-note">Nexus is AUB&rsquo;s university-wide platform. It runs on Moodle and was previously called Moodle. The Office of Student Affairs (OSA) has rolled out club pages on it for 95+ clubs and societies.</p>
+        </div>
+        <aside class="hero-card" aria-label="The standard sections of a club page">
+          <p class="hero-card-title">Every club page has</p>
+          <ul>
+            <li><span>General</span></li>
+            <li><span>Upcoming Events</span></li>
+            <li><span>Resources</span></li>
+            <li><span>Archive</span></li>
+            <li><span>Governance</span></li>
+            <li class="plus"><span>Plus extra sections clubs can add</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2 class="section-title">Pick where to go</h2>
+        <p class="lead">The guide is split into short pages. Start at the top, or jump to what you need.</p>
+        <div class="tiles">
+          <a class="tile t1" href="why.html">
+            <span class="tile-num" aria-hidden="true">1</span>
+            <h3>Why Nexus</h3>
+            <p>What club pages are for, and how they move clubs from something you follow to something you take part in.</p>
+            <span class="tile-go">Read more</span>
+          </a>
+          <a class="tile t2" href="start.html">
+            <span class="tile-num" aria-hidden="true">2</span>
+            <h3>Get started</h3>
+            <p>Five steps from registering to joining in, plus what an event looks like on Nexus.</p>
+            <span class="tile-go">See the steps</span>
+          </a>
+          <a class="tile t3" href="inside.html">
+            <span class="tile-num" aria-hidden="true">3</span>
+            <h3>Inside a club page</h3>
+            <p>Explore General, Upcoming Events, Resources, Archive, Governance, and extra sections.</p>
+            <span class="tile-go">Look inside</span>
+          </a>
+          <a class="tile t4" href="features.html">
+            <span class="tile-num" aria-hidden="true">4</span>
+            <h3>Features</h3>
+            <p>Search and filter the tools clubs can use, each with a club example.</p>
+            <span class="tile-go">Browse features</span>
+          </a>
+          <a class="tile t5" href="examples.html">
+            <span class="tile-num" aria-hidden="true">5</span>
+            <h3>See it in action</h3>
+            <p>An example page structure with IEEE AUB, and ideas for other clubs.</p>
+            <span class="tile-go">See examples</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- 3. GET STARTED -->
-    <section class="section section-tint" id="start" aria-labelledby="start-title">
-      <div class="wrap">
-        <h2 id="start-title">Get started</h2>
-        <p class="lead">Five steps from registering to taking part.</p>
-        <ol class="steps">
-          <li>
-            <h3>Register for a club</h3>
-            <p>Use Academic Services &gt; Registration.</p>
-          </li>
-          <li>
-            <h3>Open Nexus and find the club</h3>
-            <p>Registered clubs appear automatically under My Courses.</p>
-          </li>
-          <li>
-            <h3>Start with the General section</h3>
-            <p>Get to know the club, its cabinet, and its latest news.</p>
-          </li>
-          <li>
-            <h3>Check Upcoming Events</h3>
-            <p>See what is coming next.</p>
-          </li>
-          <li>
-            <h3>Join in</h3>
-            <p>Sign up, vote, discuss, or share feedback.</p>
-          </li>
-        </ol>
-        <p class="center-action"><a class="btn btn-primary" href="https://lms.aub.edu.lb" target="_blank" rel="noopener noreferrer">Open Nexus<span class="visually-hidden"> (opens in a new tab)</span></a></p>
-      </div>
-    </section>
-
-    <!-- 4. INSIDE A CLUB PAGE -->
-    <section class="section" id="inside" aria-labelledby="inside-title">
-      <div class="wrap">
-        <h2 id="inside-title">Inside a club page</h2>
-        <p class="lead">Every club page follows the same standard sections, so you always know where to look. Clubs can also add extra sections of their own.</p>
-        <div class="card-grid">
-          <article class="card">
-            <h3>General</h3>
-            <p>Mission, the president&rsquo;s message, how to connect, the cabinet, and announcements.</p>
-          </article>
-          <article class="card">
-            <h3>Upcoming Events</h3>
-            <p>Flyers, sign-ups, event details, and feedback.</p>
-          </article>
-          <article class="card">
-            <h3>Resources</h3>
-            <p>Useful files, links, and materials.</p>
-          </article>
-          <article class="card">
-            <h3>Archive</h3>
-            <p>Past events, recaps, photos, and recordings.</p>
-          </article>
-          <article class="card">
-            <h3>Governance</h3>
-            <p>Bylaws, handbook, and official club documents.</p>
-          </article>
-          <article class="card card-optional">
-            <h3>Extra sections</h3>
-            <p>Optional, such as Learn or Build. Each club decides.</p>
-          </article>
-        </div>
-        <p class="note-line">Only the five cabinet positions have editing access to a club page.</p>
-      </div>
-    </section>
-
-    <!-- 5. ALL FEATURES -->
-    <section class="section section-tint" id="features" aria-labelledby="features-title">
-      <div class="wrap">
-        <h2 id="features-title">All features</h2>
-        <p class="notice">Each club chooses which tools to use, so you may not see all of these on every club page.</p>
-
-        <div class="tools" id="tools" hidden>
-          <label class="search-label" for="feature-search">Search features</label>
-          <input class="search-input" id="feature-search" type="search" placeholder="Try &ldquo;vote&rdquo;, &ldquo;quiz&rdquo;, or &ldquo;photos&rdquo;" autocomplete="off">
-          <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
-          <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
-        </div>
-
-        <div class="feature-grid" id="feature-grid"></div>
-        <p class="empty" id="empty" hidden>No features match your search. Try a different word or choose &ldquo;All&rdquo;.</p>
-
-        <noscript>
-          <div class="noscript-box">
-            <p><strong>The searchable grid needs JavaScript.</strong> Here are the feature names by category:</p>
-            <ul>
-              <li><strong>Stay informed:</strong> Announcements forum, Text and media area, Page, URL</li>
-              <li><strong>Sign up and join in:</strong> Choice, Questionnaire, Group choice, Face-to-Face</li>
-              <li><strong>Attend and get recognized:</strong> Attendance, Custom certificate, Badges</li>
-              <li><strong>Share your voice:</strong> Feedback, Forum</li>
-              <li><strong>Learn:</strong> Book, H5P interactive content, Lesson, Quiz, StudentQuiz, Glossary, Folder</li>
-              <li><strong>Build together:</strong> Assignment, Workshop, Database, Wiki, Checklist</li>
-              <li><strong>Stay on track:</strong> Reengagement</li>
-            </ul>
-          </div>
-        </noscript>
-      </div>
-    </section>
-
-    <!-- 6. AN EVENT ON NEXUS -->
-    <section class="section" id="event" aria-labelledby="event-title">
-      <div class="wrap">
-        <h2 id="event-title">An event on Nexus</h2>
-        <p class="lead">From first look to the recap, an event can live on one club page.</p>
-        <ol class="flow">
-          <li>
-            <span class="flow-num" aria-hidden="true">1</span>
-            <h3>Discover</h3>
-            <p>Find it in Upcoming Events.</p>
-          </li>
-          <li>
-            <span class="flow-num" aria-hidden="true">2</span>
-            <h3>Sign up</h3>
-            <p>Reserve your spot if the club offers sign-ups.</p>
-          </li>
-          <li>
-            <span class="flow-num" aria-hidden="true">3</span>
-            <h3>Attend</h3>
-            <p>Show up and take part.</p>
-          </li>
-          <li>
-            <span class="flow-num" aria-hidden="true">4</span>
-            <h3>Share feedback</h3>
-            <p>Tell the club what worked.</p>
-          </li>
-          <li>
-            <span class="flow-num" aria-hidden="true">5</span>
-            <h3>See the recap</h3>
-            <p>Look back in the Archive.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- 7. SEE IT IN ACTION -->
-    <section class="section section-tint" id="example" aria-labelledby="example-title">
-      <div class="wrap">
-        <h2 id="example-title">See it in action</h2>
-        <p class="lead">IEEE AUB is our main example of how a club page can be structured.</p>
-
-        <div class="example-block">
-          <p class="label">Example page structure and ideas</p>
-          <h3>IEEE AUB</h3>
-          <p class="small">These are ideas for how a club page could be set up. They are not a list of what is currently live.</p>
-          <div class="card-grid">
-            <article class="card">
-              <h4>General</h4>
-              <p>Announcements and an optional interest-track choice.</p>
-            </article>
-            <article class="card">
-              <h4>Upcoming Events</h4>
-              <p>Workshop sign-ups, topic voting, and feedback.</p>
-            </article>
-            <article class="card">
-              <h4>Learn</h4>
-              <p>Workshop materials, recordings, and practice questions.</p>
-            </article>
-            <article class="card">
-              <h4>Build</h4>
-              <p>Solve It Tuesday, Tech Weekly, and a member project showcase.</p>
-            </article>
-            <article class="card">
-              <h4>Resources</h4>
-              <p>Materials and useful links.</p>
-            </article>
-            <article class="card">
-              <h4>Archive</h4>
-              <p>Recaps, photos, and recording links.</p>
-            </article>
-          </div>
-
-          <div class="idea-pair">
-            <div class="idea">
-              <h4>Solve It Tuesday <span class="tag">Idea</span></h4>
-              <p>A weekly algorithm problem, in any language or pseudocode, with a discussion space and recognition for consistent participation.</p>
-            </div>
-            <div class="idea">
-              <h4>Tech Weekly <span class="tag">Idea</span></h4>
-              <p>A Monday forum post with three tech stories summarized in the club&rsquo;s own words, using IEEE Spectrum as the source.</p>
-            </div>
-          </div>
-        </div>
-
-        <h3 class="subhead">Ideas for other clubs</h3>
-        <p class="small">These are ideas only. Each club decides what fits.</p>
-        <ul class="ideas-list">
-          <li><strong>Debate</strong><span>Vote on the next motion, then continue the debate in a forum.</span></li>
-          <li><strong>Photography or arts</strong><span>A shared gallery of member work.</span></li>
-          <li><strong>Outdoors or sports</strong><span>Trip sign-ups and a preparation checklist.</span></li>
-          <li><strong>Cultural clubs</strong><span>A shared glossary and a searchable event archive.</span></li>
-          <li><strong>Technical clubs</strong><span>Workshops, practice questions, and project teams.</span></li>
-        </ul>
-        <p class="inspired">These ideas are inspired by strong IEEE student branches elsewhere, such as PoliTO recording talks for members who missed them, and Brescia building activity around member projects.</p>
-      </div>
-    </section>
-
-    <!-- 8. HELP -->
-    <section class="section" id="help" aria-labelledby="help-title">
+    <section class="section section-tint">
       <div class="wrap">
         <div class="help-box">
-          <h2 id="help-title">Help</h2>
+          <h2>Help</h2>
           <p>For help with a club page, contact the club&rsquo;s cabinet or the Student Activities team at OSA.</p>
         </div>
       </div>
@@ -296,9 +114,12 @@
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <p class="footer-mark"><span class="wordmark-aub">AUB</span> Moodle for Clubs and Societies Guide</p>
-      <p>A student guide to clubs and societies on Nexus. Draft wording, pending OSA review.</p>
-      <p><a href="#top">Back to top</a></p>
+      <div class="footer-help">
+        <h2>Need help?</h2>
+        <p>For help with a club page, contact the club&rsquo;s cabinet or the Student Activities team at OSA.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer"><a href="index.html">Home</a><a href="why.html">Why Nexus</a><a href="start.html">Get started</a><a href="inside.html">Inside a club page</a><a href="features.html">Features</a><a href="examples.html">See it in action</a></nav>
+      <p class="footer-small"><span class="wordmark-aub">AUB</span> Moodle for Clubs and Societies Guide. Draft wording, pending OSA review.</p>
     </div>
   </footer>
 </body>

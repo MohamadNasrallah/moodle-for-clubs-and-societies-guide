@@ -10,6 +10,8 @@
 - [ ] **Footer:** says "Draft wording, pending OSA review". Remove it once approved.
 - [ ] **Support contact:** "the club's cabinet or the Student Activities team at OSA". Confirm whether a link or email should be added.
 
+- [ ] **Logos:** the site uses a text wordmark. If OSA wants the official AUB or Nexus logos used, OSA needs to supply the files and confirm usage rules.
+
 ## Conflicts between the brief and other instructions
 - The brief says to use "Nexus" throughout and explain the Moodle connection once. The requested site name contains "Moodle". The name is used only in the title, wordmark, heading, and footer; the page body says "Nexus". Confirm this is intended.
 - No `source/` folder was present when the site was built, so no source documents were read. Every fact comes from the brief.

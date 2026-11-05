@@ -1,14 +1,15 @@
 # Moodle for Clubs and Societies Guide
 
-A simple, static, one-page guide that shows AUB students what they can do on Nexus through clubs and societies.
+A simple, static, multi-page guide that shows AUB students what they can do on Nexus through clubs and societies.
 
 Plain HTML, CSS, and JavaScript. No framework, no build step, no backend, no cookies, no analytics.
 
 ## Files
 
-- `index.html` - the page and most of the wording
+- `index.html` - home page
+- `why.html`, `start.html`, `inside.html`, `features.html`, `examples.html` - the other pages
 - `styles.css` - the look (AUB maroon is the `--aub-maroon` variable at the top)
-- `script.js` - the feature list (at the top), the feature search and filters, and the mobile menu
+- `script.js` - the feature list (at the top), plus the feature search and filters, the section tabs, and the mobile menu
 - `CONTENT_TODO.md` - items for OSA to review
 
 ## Preview
@@ -18,7 +19,7 @@ Open `index.html` in a browser. No server is needed.
 ## Edit the content
 
 - **Features:** edit the `FEATURES` array at the top of `script.js`. Each item has `name`, `category`, `meaning`, and `example`. The `category` must match one of the names in the `CATEGORIES` list just above it.
-- **Everything else** (mission, steps, club sections, IEEE example, help text): edit `index.html`.
+- **Everything else:** edit the page it appears on. Mission and navigation tiles are in `index.html`, the reasons in `why.html`, the steps and event flow in `start.html`, club sections in `inside.html`, and the IEEE example and ideas for other clubs in `examples.html`. The header and footer are repeated in each page, so change them in all six.
 - **Colour:** change `--aub-maroon` in `styles.css`.
 
 All paths are relative, so the site works from a folder, from `file://`, and on GitHub Pages.
