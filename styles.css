@@ -391,3 +391,6 @@ a { color: var(--aub-maroon); }
 .mail-row { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
 .btn-secondary { background: #fff; color: var(--aub-maroon); border-color: var(--aub-maroon); }
 .btn-secondary:hover { background: var(--maroon-tint); }
+
+/* Larger tap target for the header name on phones */
+.wordmark { min-height: 44px; }
