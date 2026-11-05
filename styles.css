@@ -391,8 +391,3 @@ a { color: var(--aub-maroon); }
 .mail-row { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
 .btn-secondary { background: #fff; color: var(--aub-maroon); border-color: var(--aub-maroon); }
 .btn-secondary:hover { background: var(--maroon-tint); }
-
-/* Square corners on colored and button-style elements */
-.btn, .menu-toggle, .site-nav a:not(.btn), .tab, .chip, .eyebrow, .label, .tag,
-.why-num, .timeline li::before, .flow-num, .tile-num, .hero-card li::before,
-.pill-list li, .pager-link, .hero-card li, .hero-card li.plus { border-radius: 0; }
